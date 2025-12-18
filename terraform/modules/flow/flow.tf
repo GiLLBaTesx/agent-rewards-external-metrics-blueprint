@@ -1,6 +1,6 @@
 resource "genesyscloud_flow" "inbound_call_flow" {
   filepath = "${path.module}/agent-rewards.yaml"
-  file_content_hash = filesha256("${path.module}/agent-rewards.yaml")
+  
   substitutions = {
     flow_name               = "Agent Rewards"
     division                = "Home"
